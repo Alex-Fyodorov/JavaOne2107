@@ -69,9 +69,9 @@ public class HomeWorkApp {
      * @param d введённое число
      * @return возвращает true или false
      */
-        public static boolean check2(int d) {
-            return d < 0;
-        }
+    public static boolean check2(int d) {
+        return d < 0;
+    }
 
     /**
      * Задание 4.
@@ -98,5 +98,4 @@ public class HomeWorkApp {
     public static boolean year(int y) {
         return y % 400 == 0 || y % 4 == 0 && y % 100 != 0;
     }
-
 }
