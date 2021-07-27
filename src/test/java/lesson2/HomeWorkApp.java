@@ -44,7 +44,7 @@ public class HomeWorkApp {
      */
     public static boolean sum(int a, int b) {
         int s = a + b;
-        return (s >= 10) && (s <= 20);
+        return s >= 10 && s <= 20;
     }
 
     /**
@@ -70,12 +70,8 @@ public class HomeWorkApp {
      * @return возвращает true или false
      */
         public static boolean check2(int d) {
-        if (d < 0) {
-            return true;
-        } else {
-            return false;
+            return d < 0;
         }
-    }
 
     /**
      * Задание 4.
@@ -100,11 +96,7 @@ public class HomeWorkApp {
      * @return  возвращает true или false
      */
     public static boolean year(int y) {
-        if (y % 400 == 0) {
-            return true;
-        } else if (y % 4 == 0 && y % 100 != 0) {
-            return true;
-        } else return false;
+        return y % 400 == 0 || y % 4 == 0 && y % 100 != 0;
     }
 
 }
