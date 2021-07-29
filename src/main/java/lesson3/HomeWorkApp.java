@@ -318,6 +318,7 @@ public class HomeWorkApp {
             return array;
         }
 
+        // Сам сдвиг цикла.
         int[] shiftedArray = new int[array.length];
         for (int i = 0; i < array.length; i ++){
             if (i + shift >= array.length){
