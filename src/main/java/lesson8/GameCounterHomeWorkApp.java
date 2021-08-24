@@ -57,54 +57,10 @@ public class GameCounterHomeWorkApp extends JFrame {
 
         /*Слушатели кнопок счётчика. При достижении конечного значения
         * кнопки отключаются, и появляется сообщение о конце игры.*/
-        button[0].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (value != endsValue){
-                    value += buttonValue[0];
-                    counterValue.setText(String.valueOf(value));
-                    if (value == endsValue){
-                        infoPane.setText("Вы выиграли!");
-                    }
-                }
-            }
-        });
-        button[1].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (value != endsValue){
-                    value += buttonValue[1];
-                    counterValue.setText(String.valueOf(value));
-                    if (value == endsValue){
-                        infoPane.setText("Вы выиграли!");
-                    }
-                }
-            }
-        });
-        button[2].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (value != endsValue){
-                    value += buttonValue[2];
-                    counterValue.setText(String.valueOf(value));
-                    if (value == endsValue){
-                        infoPane.setText("Вы выиграли!");
-                    }
-                }
-            }
-        });
-        button[3].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (value != endsValue){
-                    value += buttonValue[3];
-                    counterValue.setText(String.valueOf(value));
-                    if (value == endsValue){
-                        infoPane.setText("Вы выиграли!");
-                    }
-                }
-            }
-        });
+        buttonListener(button[0], buttonValue[0], counterValue, infoPane);
+        buttonListener(button[1], buttonValue[1], counterValue, infoPane);
+        buttonListener(button[2], buttonValue[2], counterValue, infoPane);
+        buttonListener(button[3], buttonValue[3], counterValue, infoPane);
 
         //Слушатель кнопки перезапуска
         restartButton.addActionListener(new ActionListener() {
@@ -119,6 +75,32 @@ public class GameCounterHomeWorkApp extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Метод, осуществляющий слушание четырёх основных кнопок.
+     * Также  метод проверяет начение счётчика и конечное значение.
+     * При достижении конечного значения кнопки отключаются,
+     * и появляется сообщение о конце игры.
+     *
+     * @param button Проверяемая кнопка
+     * @param buttonValue Значение кнгопки
+     * @param counterValue Значение счётчика
+     * @param infoPane текст на инфо-экране
+     */
+    public void buttonListener(JButton button, int buttonValue,
+                     JLabel counterValue, JLabel infoPane) {
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (value != endsValue) {
+                    value += buttonValue;
+                    counterValue.setText(String.valueOf(value));
+                    if (value == endsValue) {
+                        infoPane.setText("Вы выиграли!");
+                    }
+                }
+            }
+        });
+    }
     public static void main(String[] args) {
         new GameCounterHomeWorkApp(new Random().nextInt(202) - 101);
     }
