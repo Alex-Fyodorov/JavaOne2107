@@ -72,8 +72,12 @@ public class ExperimentApp {
         sb.setLength(10);
         System.out.println(sb);
 
-        String stringFromSB = sb.toString();
+        //Альтернативная версия if
+        for (int i = 0; i < 10; i++){
+            System.out.println(i < 5? "Меньше": "Больше");
+        }
 
+        String stringFromSB = sb.toString();
 
 
     }
