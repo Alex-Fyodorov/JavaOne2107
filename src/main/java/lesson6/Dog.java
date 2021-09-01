@@ -1,6 +1,6 @@
 package lesson6;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private String name;
     private int runDistance;
     private int swimDistance;
@@ -14,8 +14,8 @@ public class Dog extends Animal{
      * до максимальных. Также метод считает, сколько было создано собак.
      * Использовать функцию Math.min подсказала сама IDEA.
      *
-     * @param name имя
-     * @param runDistance дистанция бега
+     * @param name         имя
+     * @param runDistance  дистанция бега
      * @param swimDistance дистанция заплыва
      */
     public Dog(String name, int runDistance, int swimDistance) {

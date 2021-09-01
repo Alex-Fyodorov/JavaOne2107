@@ -2,7 +2,7 @@ package lesson6;
 
 import java.util.Random;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private String name;
     private static final int maxRunDistance = 200;
     private static final int maxSwimDistance = 0;
@@ -17,7 +17,7 @@ public class Cat extends Animal{
     /**
      * Метод, выводящий длину пробега у котов.
      */
-    public void run (){
+    public void run() {
         System.out.println(this.name + " пробежал " +
                 (1 + random.nextInt(maxRunDistance)) + " метров.");
     }
@@ -28,8 +28,8 @@ public class Cat extends Animal{
      *
      * @return false, если коты не умеют плавать
      */
-    public boolean swim (){
-        if (maxSwimDistance == 0){
+    public boolean swim() {
+        if (maxSwimDistance == 0) {
             System.out.println("Коты не умеют плавать.");
             return false;
         } else {

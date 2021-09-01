@@ -25,7 +25,7 @@ public class HomeWorkApp {
         String m = "Будем печатать эту строку.";
         int m2 = 5;
         System.out.println("Количество - " + m2 + ".");
-        cycle (m, m2);
+        cycle(m, m2);
         System.out.println();
         System.out.println("Задание 5:");
         int year = 2021;
@@ -77,11 +77,11 @@ public class HomeWorkApp {
      * Задание 4.
      * Печатает введённую строку нужное число раз.
      *
-     * @param m введённая строка
+     * @param m  введённая строка
      * @param m2 количество раз печати
      */
     public static void cycle(String m, int m2) {
-        for (int i = 0; i < m2; i ++) {
+        for (int i = 0; i < m2; i++) {
             System.out.println(m);
         }
     }
@@ -93,7 +93,7 @@ public class HomeWorkApp {
      * кроме каждого 100-го, при этом каждый 400-й – високосный.
      *
      * @param y введённый год
-     * @return  возвращает true или false
+     * @return возвращает true или false
      */
     public static boolean year(int y) {
         return y % 400 == 0 || y % 4 == 0 && y % 100 != 0;
