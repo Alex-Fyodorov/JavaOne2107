@@ -37,4 +37,8 @@ public class Worker {
                 ", age=" + age +
                 '}';
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
